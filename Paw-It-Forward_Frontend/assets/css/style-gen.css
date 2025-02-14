@@ -8,7 +8,8 @@
     --background-fallback: #2A2C2B;
     --font-family: 'Josefin Sans', sans-serif;
     --font-gen-size: 20px;
-    --font-header-size: 70px;
+    --font-header-size: 60px;
+    --font-go-size: 50px;
     --bolded: 700;
     --button-padding: 0.5rem 1.2rem 0.5rem 1.2rem;
 }
@@ -18,13 +19,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: ;
+    color: var(--primary-color);
     font-family: var(--font-family);
     text-decoration: none;
     color: var(--primary-color);
 }
 
-/* TOP LANE */
+/* TOP LANE (Title + Nav) */
 header {
     position: absolute;
     width: 100%;
@@ -60,46 +61,53 @@ header {
     border: var(--background-fallback) solid 2px;
     border-radius: 71px;
     padding: var(--button-padding);
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+.nav-item-donate:hover {
+    background-color: var(--background-fallback);
+    color: var(--primary-color);
 }
 .nav-item {
-  position: relative; /* Needed for absolute positioning of the arrow */
+  position: relative;
 }
-.nav-item::before {
+.nav-item::before { /* arrow for focus/hover */ 
     content: "";
     display: inline-block;
-    width: 0;
-    overflow: hidden;
-    transition: width 0.2s ease-in-out;
-    margin-right: 5px;
-    color: var(--background-fallback);
     position: absolute;
-    left: 0; 
+    width: 20px;
+    height: 20px;
+    background-image: url("/Paw-It-Forward_Frontend/assets/img/active-ind.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 0;
     top: 50%;
     transform: translateY(-50%) translateX(-150%);
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+
 }
 .nav-item:hover::before,
 .nav-item:focus::before {
-    content: "→"; 
-    width: auto;
-    font-weight: 700; 
-}
-.nav-item:hover,
-.nav-item:focus {
-    outline: none; /* Remove the default outline */
+    content: "";
+    opacity: 1;
 }
 
 .left-section {
-    height: 100vh;
     width: 48vw;
     background-color: var(--background-fallback);
-    background-image: url(/img/background.png);
-    padding: 276px 80px 5rem 80px;
+    background-image: url(/Paw-It-Forward_Frontend/assets/img/background.png);
+    padding: 300px 80px 5rem 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 300px;
 }
 .left-section .content {
     display: flex;
     flex-direction: column;
     gap: 60px;
     align-items: flex-start; /* Prevent content from stretching */
+    margin-bottom: 5rem;
 }
 .content {
     display: flex;
@@ -113,13 +121,22 @@ header {
 }
 
 .donate-btn {
+    font-weight: var(--bolded);
     font-size: var(--font-gen-size);
     color: var(--background-fallback);
     border: var(--secondary-color) solid 2px;
     background-color: var(--secondary-color);
     border-radius: 71px;
     padding: var(--button-padding);
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+}
+.donate-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--background-fallback);
+    border: var(--primary-color) solid 2px;
 }
 .scroll-link {
     text-decoration: underline;
+    font-size: var(--font-go-size);
+    font-weight: var(--bolded);
 }
