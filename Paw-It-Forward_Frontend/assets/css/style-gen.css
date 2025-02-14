@@ -1,0 +1,125 @@
+/* IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* VARIABLES */
+:root {
+    --primary-color: white;
+    --secondary-color: #EBE597;
+    --background-fallback: #2A2C2B;
+    --font-family: 'Josefin Sans', sans-serif;
+    --font-gen-size: 20px;
+    --font-header-size: 70px;
+    --bolded: 700;
+    --button-padding: 0.5rem 1.2rem 0.5rem 1.2rem;
+}
+
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: ;
+    font-family: var(--font-family);
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* TOP LANE */
+header {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font-gen-size);
+    font-weight: var(--bolded);
+    padding: 5rem;
+}
+.site-title {
+    color: var(--primary-color);
+}
+.site-title::before { /* yellow circle */
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 20px;
+}
+.nav a {
+    color: var(--background-fallback);
+}
+.nav-item-donate {
+    border: var(--background-fallback) solid 2px;
+    border-radius: 71px;
+    padding: var(--button-padding);
+}
+.nav-item {
+  position: relative; /* Needed for absolute positioning of the arrow */
+}
+.nav-item::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.2s ease-in-out;
+    margin-right: 5px;
+    color: var(--background-fallback);
+    position: absolute;
+    left: 0; 
+    top: 50%;
+    transform: translateY(-50%) translateX(-150%);
+}
+.nav-item:hover::before,
+.nav-item:focus::before {
+    content: "→"; 
+    width: auto;
+    font-weight: 700; 
+}
+.nav-item:hover,
+.nav-item:focus {
+    outline: none; /* Remove the default outline */
+}
+
+.left-section {
+    height: 100vh;
+    width: 48vw;
+    background-color: var(--background-fallback);
+    background-image: url(/img/background.png);
+    padding: 276px 80px 5rem 80px;
+}
+.left-section .content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: flex-start; /* Prevent content from stretching */
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.content-header {
+    font-weight: var(--bolded);
+    font-size: var(--font-header-size);
+    width: 70%;
+}
+
+.donate-btn {
+    font-size: var(--font-gen-size);
+    color: var(--background-fallback);
+    border: var(--secondary-color) solid 2px;
+    background-color: var(--secondary-color);
+    border-radius: 71px;
+    padding: var(--button-padding);
+}
+.scroll-link {
+    text-decoration: underline;
+}
