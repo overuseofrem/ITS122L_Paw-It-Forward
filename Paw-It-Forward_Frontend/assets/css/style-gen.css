@@ -7,15 +7,17 @@
     --secondary-color: #EBE597;
     --background-fallback: #2A2C2B;
     --font-family: 'Josefin Sans', sans-serif;
-    --font-gen-size: 20px;
+    --font-gen-size: 20px; 
     --font-header-size: 60px;
     --font-go-size: 50px;
+    --font-mini-size: 28px;
     --bolded: 700;
     --button-padding: 0.5rem 1.2rem 0.5rem 1.2rem;
 }
 
 /* General Reset */
 * {
+    font-size: var(--font-gen-size);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -23,6 +25,9 @@
     font-family: var(--font-family);
     text-decoration: none;
     color: var(--primary-color);
+}
+body {
+    display: flex;
 }
 
 /* TOP LANE (Title + Nav) */
@@ -87,8 +92,7 @@ header {
     transition: opacity 0.1s ease-in-out;
 
 }
-.nav-item:hover::before,
-.nav-item:focus::before {
+.nav-item:hover::before, #active::before {
     content: "";
     opacity: 1;
 }
@@ -100,27 +104,51 @@ header {
     padding: 300px 80px 5rem 80px;
     display: flex;
     flex-direction: column;
-    gap: 300px;
+    gap: 50px;
 }
-.left-section .content {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-    align-items: flex-start; /* Prevent content from stretching */
-    margin-bottom: 5rem;
+.left-section #hero {
+    margin-bottom: 300px;
 }
 .content {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 45px;
+    align-items: flex-start; /* Prevent content from stretching */
+    margin-bottom: 1rem;
 }
 .content-header {
     font-weight: var(--bolded);
     font-size: var(--font-header-size);
-    width: 70%;
+    width: 80%;
+}
+#hero .content-header {
+    width: 50%;
+}
+.content p {
+    width: 80%;
+}
+.btn-section {
+    display: flex;;
+    gap: 2rem;
+}
+.address {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+.bottom-up {
+    color:var(--primary-color);
+    text-decoration: underline;
+    font-size: 16px;
+    font-style: italic;
+}
+.map-container {
+    margin-top: 0.5rem;
+    width: 80%;
 }
 
-.donate-btn {
+.yellow-btn {
     font-weight: var(--bolded);
     font-size: var(--font-gen-size);
     color: var(--background-fallback);
@@ -130,7 +158,7 @@ header {
     padding: var(--button-padding);
     transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 }
-.donate-btn:hover {
+.yellow-btn:hover {
     background-color: var(--primary-color);
     color: var(--background-fallback);
     border: var(--primary-color) solid 2px;
@@ -139,4 +167,53 @@ header {
     text-decoration: underline;
     font-size: var(--font-go-size);
     font-weight: var(--bolded);
+    position: relative;
+    padding-right: 20px;
 }
+.scroll-link::after {
+    content: "";
+    display: inline-block;
+    width: 40px; 
+    height: 40px;
+    background-image: url("/Paw-It-Forward_Frontend/assets/img/go-arrow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute; 
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(80%); 
+}
+.socials a {
+    position: relative;
+    font-weight: var(--bolded);
+    font-size: var(--font-mini-size);
+}
+.socials a::after {
+    content: "";
+    display: inline-block;
+    width: 30px; 
+    height: 30px;
+    background-image: url("/Paw-It-Forward_Frontend/assets/img/social-arrow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute; 
+    right: 0;
+    top: 50%;
+    transform: translateY(-40%) translateX(170%);
+==
+}
+.bolder-mini {
+    font-size: var(--font-mini-size);
+    font-weight: var(--bolded);
+}
+.right-section {
+    display: flex;
+    flex-direction: column;
+}
+img {
+    height: 100vh;
+    width: 52vw;
+    right: 0;
+    object-fit: cover;
+}
+
