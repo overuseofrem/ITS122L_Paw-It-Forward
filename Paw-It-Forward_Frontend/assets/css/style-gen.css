@@ -1,36 +1,79 @@
+/* ==========================================================================
+   Table of Contents:
+   --------------------------------------------------------------------------
+   1.  Global Styles & Resets
+   2.  Variables (Root)
+   3.  Typography
+   4.  Layout (Body, Sections)
+   5.  Header (Site Title, Navigation)
+   6.  Left Section (Content, Buttons, Address)
+   7.  Right Section (Images)
+   8.  Reusable Components (Buttons, Scroll Link)
+   ========================================================================== */
+
+/* ==========================================================================
+   1. Global Styles & Resets
+   ========================================================================== */
+
 /* IMPORT FONT */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
-/* VARIABLES */
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--primary-color); /* Inherited from body, but good to have */
+    font-family: var(--font-family);
+    text-decoration: none;      /* Remove underlines from links */
+    font-size: var(--font-gen-size); /* General font size */
+}
+
+/* ==========================================================================
+   2. Variables (Root)
+   ========================================================================== */
+
 :root {
     --primary-color: white;
     --secondary-color: #EBE597;
     --background-fallback: #2A2C2B;
     --font-family: 'Josefin Sans', sans-serif;
-    --font-gen-size: 20px; 
+    --font-gen-size: 20px;
     --font-header-size: 60px;
     --font-go-size: 50px;
     --font-mini-size: 28px;
     --bolded: 700;
-    --button-padding: 0.5rem 1.2rem 0.5rem 1.2rem;
+    --button-padding: 0.5rem 1.2rem;  /* Simplified: all sides defined */
 }
 
-/* General Reset */
-* {
-    font-size: var(--font-gen-size);
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    color: var(--primary-color);
-    font-family: var(--font-family);
-    text-decoration: none;
-    color: var(--primary-color);
+/* ==========================================================================
+   3. Typography
+   ========================================================================== */
+
+.bolder-mini {
+    font-size: var(--font-mini-size);
+    font-weight: var(--bolded);
 }
+
+.bottom-up {
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* ==========================================================================
+   4. Layout (Body, Sections)
+   ========================================================================== */
+
 body {
-    display: flex;
+    display: flex;           /* For left/right section layout */
 }
 
-/* TOP LANE (Title + Nav) */
+/* ==========================================================================
+   5. Header (Site Title, Navigation)
+   ========================================================================== */
+
 header {
     position: absolute;
     width: 100%;
@@ -40,9 +83,12 @@ header {
     font-weight: var(--bolded);
     padding: 5rem;
 }
+
+/* Site Title */
 .site-title {
     color: var(--primary-color);
 }
+
 .site-title::before { /* yellow circle */
     content: "";
     display: inline-block;
@@ -53,29 +99,38 @@ header {
     margin-right: 10px;
     vertical-align: middle;
 }
+
+/* Navigation */
 .nav {
     display: flex;
     flex-direction: column;
     align-items: end;
     gap: 20px;
 }
+
 .nav a {
     color: var(--background-fallback);
 }
+
+/* Donate Button */
 .nav-item-donate {
     border: var(--background-fallback) solid 2px;
     border-radius: 71px;
     padding: var(--button-padding);
     transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
 }
+
 .nav-item-donate:hover {
     background-color: var(--background-fallback);
     color: var(--primary-color);
 }
+
+/* Navigation Item (General) */
 .nav-item {
-  position: relative;
+    position: relative;
 }
-.nav-item::before { /* arrow for focus/hover */ 
+
+.nav-item::before { /* arrow for focus/hover */
     content: "";
     display: inline-block;
     position: absolute;
@@ -90,12 +145,17 @@ header {
     transform: translateY(-50%) translateX(-150%);
     opacity: 0;
     transition: opacity 0.1s ease-in-out;
-
 }
-.nav-item:hover::before, #active::before {
+
+.nav-item:hover::before,
+#active::before {
     content: "";
     opacity: 1;
 }
+
+/* ==========================================================================
+   6. Left Section (Content, Buttons, Address)
+   ========================================================================== */
 
 .left-section {
     width: 48vw;
@@ -106,9 +166,12 @@ header {
     flex-direction: column;
     gap: 50px;
 }
+
 .left-section #hero {
     margin-bottom: 300px;
 }
+
+/* Content Section */
 .content {
     display: flex;
     flex-direction: column;
@@ -116,38 +179,61 @@ header {
     align-items: flex-start; /* Prevent content from stretching */
     margin-bottom: 1rem;
 }
+
 .content-header {
     font-weight: var(--bolded);
     font-size: var(--font-header-size);
     width: 80%;
 }
+
 #hero .content-header {
     width: 50%;
 }
+
 .content p {
     width: 80%;
 }
+
+/* Button Section */
 .btn-section {
-    display: flex;;
+    display: flex;
     gap: 2rem;
 }
+
+/* Address Section */
 .address {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     width: 100%;
 }
-.bottom-up {
-    color:var(--primary-color);
-    text-decoration: underline;
-    font-size: 16px;
-    font-style: italic;
-}
+
 .map-container {
     margin-top: 0.5rem;
     width: 80%;
 }
 
+/* ==========================================================================
+   7. Right Section (Images)
+   ========================================================================== */
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    height: 100vh;
+    width: 52vw;
+    right: 0;
+    object-fit: cover;
+}
+
+/* ==========================================================================
+   8. Reusable Components (Buttons, Scroll Link)
+   ========================================================================== */
+
+/* Yellow Button */
 .yellow-btn {
     font-weight: var(--bolded);
     font-size: var(--font-gen-size);
@@ -158,11 +244,14 @@ header {
     padding: var(--button-padding);
     transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 }
+
 .yellow-btn:hover {
     background-color: var(--primary-color);
     color: var(--background-fallback);
     border: var(--primary-color) solid 2px;
 }
+
+/* Scroll Link */
 .scroll-link {
     text-decoration: underline;
     font-size: var(--font-go-size);
@@ -170,50 +259,38 @@ header {
     position: relative;
     padding-right: 20px;
 }
+
 .scroll-link::after {
     content: "";
     display: inline-block;
-    width: 40px; 
+    width: 40px;
     height: 40px;
     background-image: url("/Paw-It-Forward_Frontend/assets/img/go-arrow.svg");
     background-size: contain;
     background-repeat: no-repeat;
-    position: absolute; 
+    position: absolute;
     right: 0;
     top: 50%;
-    transform: translateY(-50%) translateX(80%); 
+    transform: translateY(-50%) translateX(80%);
 }
+
+/* Social Links */
 .socials a {
     position: relative;
     font-weight: var(--bolded);
     font-size: var(--font-mini-size);
 }
+
 .socials a::after {
     content: "";
     display: inline-block;
-    width: 30px; 
+    width: 30px;
     height: 30px;
     background-image: url("/Paw-It-Forward_Frontend/assets/img/social-arrow.svg");
     background-size: contain;
     background-repeat: no-repeat;
-    position: absolute; 
+    position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-40%) translateX(170%);
-==
 }
-.bolder-mini {
-    font-size: var(--font-mini-size);
-    font-weight: var(--bolded);
-}
-.right-section {
-    display: flex;
-    flex-direction: column;
-}
-img {
-    height: 100vh;
-    width: 52vw;
-    right: 0;
-    object-fit: cover;
-}
-
