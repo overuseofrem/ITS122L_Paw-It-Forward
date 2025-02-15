@@ -1,9 +1,12 @@
-<!DOCTYPE html>
+<?php
+    $pageTitle = "Paw It Forward";
+?>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paw It Forward</title>
+    <title><?php echo $pageTitle; ?></title>
     <link rel="stylesheet" href="assets/css/style-gen.css">
 </head>
 
@@ -11,12 +14,12 @@
 
     <!-- Site name + Nav -->
     <header>
-        <a href="index.html" class="site-title" id="title">paw it forward</a>
+        <a href="index.php" class="site-title" id="title">paw it forward</a>
         <div class="nav">
-            <a href="donate-sign.html" class="nav-item-donate">donate</a>
-            <a href="about.html" class="nav-item">our goal</a>
-            <a href="contact.html" class="nav-item">contact</a>
-            <a href="login.html" class="nav-item" id="active">account</a>
+            <a href="donate-sign.php" class="nav-item-donate">donate</a>
+            <a href="about.php" class="nav-item">our goal</a>
+            <a href="contact.php" class="nav-item">contact</a>
+            <a href="login.php" class="nav-item" id="active">account</a>
         </div>
     </header>
 
@@ -27,8 +30,8 @@
             <div class="content" id="sign-in">
                 <div class="content-header">login</div>
                 <div class="btn-section-side">
-                    <a href="login.html" class="outline-btn">user account</a>
-                    <a href="admin-login.html" class="yellow-btn">admin account</a>
+                    <a href="login.php" class="outline-btn">user account</a>
+                    <a href="admin-login.php" class="yellow-btn">admin account</a>
                 </div>
 
                 <form action="#" method="post">
@@ -51,7 +54,7 @@
 
     <!-- Right Section w/ Img -->
     <div class="right-section">
-        <img src="/Paw-It-Forward_Frontend/assets/img/dogs (side)/flouffy-g2FtlFrc164-unsplash.jpg" alt="">
+        <img src="assets/img/dogs (side)/flouffy-g2FtlFrc164-unsplash.jpg" alt="">
     </div>
 
 </body>

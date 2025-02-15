@@ -1,52 +1,54 @@
+<?php
+    $pageTitle = "Our Goal - Paw It Forward";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Goal - Paw It Forward</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title><?php echo $pageTitle; ?></title>
+    <link rel="stylesheet" href="assets/css/style-gen.css">
 </head>
 <body>
 
-    <!-- Left Section with Black Background and Content -->
+    <!-- Site name + Nav -->
+    <header>
+        <a href="index.php" class="site-title" id="title">paw it forward</a>
+        <div class="nav">
+            <a href="donate-sign.php" class="nav-item-donate">donate</a>
+            <a href="about.php" class="nav-item" id="active">our goal</a>
+            <a href="contact.php" class="nav-item">contact</a>
+            <a href="login.php" class="nav-item">account</a>
+        </div>
+    </header>
+
+    <!-- Left Section w/ Content -->
     <div class="left-section">
-        <h1>our goal: <br> bridging kindness <br> for a better world</h1>
- 
-        <!-- Content Sections -->
-        <div class="content-section">
-            <h2>our vision</h2>
-            <p>We envision a world where acts of kindness make a lasting impact. Our mission is to create a compassionate network that connects generous donors with individuals and communities in need, ensuring support reaches those who require it most.</p>
+        <div class="content-wrapper">
+            <!-- Expanded Content Section Below -->
+            <div class="content" id="what-we-have-done">
+                <div class="content-header">every dog deserves a chance to have a better life</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam enim varius, gravida ante commodo, blandit ex. Duis at magna pulvinar, imperdiet sapien vitae, feugiat lectus. Nullam tempor blandit efficitur. Nam quis odio nec sapien hendrerit imperdiet.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam enim varius, gravida ante commodo, blandit ex. Duis at magna pulvinar, imperdiet sapien vitae, feugiat lectus. Nullam tempor blandit efficitur. Nam quis odio nec sapien hendrerit imperdiet.</p>
+            </div>
+            <div class="content">
+                <div class="content-header">we envisage a world where all animals are treated with respect</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam enim varius, gravida ante commodo, blandit ex. Duis at magna pulvinar, imperdiet sapien vitae, feugiat lectus. Nullam tempor blandit efficitur. Nam quis odio nec sapien hendrerit imperdiet.</p>
+            </div>
+            <!-- New Button Section Below Content -->
+            <div class="btn-section-side">
+                <a href="donate-sign.php" class="yellow-btn">Donate</a>
+                <a href="contact.php" class="yellow-btn">Contact Us</a>
+            </div>
         </div>
-
-        <div class="content-section">
-            <h2>how we help</h2>
-            <p>Paw It Forward serves as a bridge between donors and recipients, facilitating the provision of essential resources such as food, medical assistance, and shelter. We work with volunteers and partners to ensure that every contribution directly improves lives.</p>
-        </div>
-
-        <div class="content-section">
-            <h2>educating & advocating</h2>
-            <p>Beyond providing aid, we promote awareness and advocate for sustainable support systems. Through education, outreach, and community-driven initiatives, we empower individuals to participate in meaningful change and make a difference in the lives of those in need.</p>
-        </div>
-
-        <!-- New Button Section Below Content -->
-        <div class="button-container">
-            <a href="donate.php" class="btn">Donate</a>
-            <a href="contact.php" class="btn">Contact Us</a>
-        </div>
-
+        <a href="#title" class="bottom-up">go back up</a>
     </div>
 
-<header>
-    <div class="logo">
-        <a href="index.php">🐾 Paw It Forward</a>
+    <!-- Right Section w/ Img -->
+    <div class="right-section">
+        <img src="assets/img/dogs (side)/jay-wennington-CdK2eYhWfQ0-unsplash.jpg" alt="">
+        <img src="assets/img/dogs (side)/ja-san-miguel-_-QQuvAwQ-0-unsplash.jpg" alt="">
     </div>
-    <nav>
-        <a href="donate.php" class="nav-btn <?= basename($_SERVER['PHP_SELF']) == 'donate.php' ? 'active' : ''; ?>">Donate</a>
-        <a href="about.php" class="<?= basename($_SERVER['PHP_SELF']) == 'about.php' ? 'active' : ''; ?>">Our Goal</a>
-        <a href="contact.php" class="<?= basename($_SERVER['PHP_SELF']) == 'contact.php' ? 'active' : ''; ?>">Contact Us</a>
-        <a href="account.php" class="<?= basename($_SERVER['PHP_SELF']) == 'account.php' ? 'active' : ''; ?>">Account</a>
-    </nav>
-</header>
 
 </body>
 </html>
