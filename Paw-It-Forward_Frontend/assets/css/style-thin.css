@@ -29,6 +29,10 @@
     font-size: var(--font-gen-size); /* General font size */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* ==========================================================================
    2. Variables (Root)
    ========================================================================== */
@@ -189,11 +193,7 @@ header {
 .content-header {
     font-weight: var(--bolded);
     font-size: var(--font-header-size);
-    width: 80%;
-}
-
-#hero .content-header { /* General Hero header */
-    width: 50%;
+    width: 60%;
 }
 
 #sign-in .content-header { /* sign-in/Login header */
@@ -201,7 +201,7 @@ header {
 }
 
 .content p {
-    width: 80%;
+    width: 60%;
 }
 
 /* Button Section */
