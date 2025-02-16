@@ -146,7 +146,7 @@ header {
     position: absolute;
     width: 25px;
     height: 25px;
-    background-image: url("/Paw-It-Forward_Frontend/assets/img/active-ind.svg");
+    background-image: url("/assets/img/active-ind.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -170,7 +170,7 @@ header {
 .left-section {
     width: 80vw;
     background-color: var(--background-fallback);
-    background-image: url("/Paw-It-Forward_Frontend/assets/img/background.png");
+    background-image: url("/assets/img/background.png");
     padding: 300px 80px 1rem 80px;
     display: flex;
     flex-direction: column;
@@ -193,7 +193,7 @@ header {
 .content-header {
     font-weight: var(--bolded);
     font-size: var(--font-header-size);
-    width: 60%;
+    width: 55%;
 }
 
 #sign-in .content-header { /* sign-in/Login header */
@@ -201,8 +201,56 @@ header {
 }
 
 .content p {
-    width: 60%;
+    width: 55%;
 }
+
+#donation-info {
+    margin-bottom: 300px;
+}
+
+.donation-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-start; /* Prevent content from stretching */
+    margin-bottom: 5rem;
+}
+
+.donation-head {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.donation-title {
+    font-size: var(--font-header-size);
+    font-weight: var(--bolded);
+}
+
+.donation-raised {
+    font-size: 32px;
+    font-style: italic;
+    margin-top: 14px;
+}
+
+.donation-content p {
+    width: 65%;
+    margin-bottom: 1rem;
+}
+
+.qr-code, .dog-img {
+    border-radius: 20px;
+    margin-right: 2rem;
+    width: 15rem;
+    height: 15rem;
+}
+
+#cert-submission {
+    margin-top: 300px;
+}
+
+
+
 
 /* Button Section */
 .btn-section-side {
@@ -262,6 +310,7 @@ img {
     border-radius: 71px;
     padding: var(--button-padding);
     transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+    cursor: pointer;
 }
 
 .yellow-btn:hover {
@@ -277,6 +326,7 @@ img {
     border-radius: 71px;
     padding: var(--button-padding);
     transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+    cursor: pointer;
 }
 
 .outline-btn:hover {
@@ -298,11 +348,15 @@ img {
     display: inline-block;
     width: 40px;
     height: 40px;
-    background-image: url("/Paw-It-Forward_Frontend/assets/img/go-arrow.svg");
+    background-image: url("/assets/img/go-arrow.svg");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%) translateX(80%);
+}
+
+#fileInput {
+    display: none;
 }
