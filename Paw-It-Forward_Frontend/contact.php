@@ -1,21 +1,24 @@
+<?php
+    $pageTitle = "Contact Us - Paw It Forward";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Paw It Forward</title>
+    <title><?php echo $pageTitle; ?></title>
     <link rel="stylesheet" href="assets/css/style-gen.css">
 </head>
 <body>
 
     <!-- Site name + Nav -->
     <header>
-        <a href="index.html" class="site-title" id="title">paw it forward</a>
+        <a href="index.php" class="site-title" id="title">paw it forward</a>
         <div class="nav">
-            <a href="donate-sign.html" class="nav-item-donate">donate</a>
-            <a href="about.html" class="nav-item">our goal</a>
-            <a href="contact.html" class="nav-item" id="active">contact</a>
-            <a href="login.html" class="nav-item">account</a>
+            <a href="donate-sign.php" class="nav-item-donate">donate</a>
+            <a href="about.php" class="nav-item">our goal</a>
+            <a href="contact.php" class="nav-item" id="active">contact</a>
+            <a href="login.php" class="nav-item">account</a>
         </div>
     </header>
 
@@ -48,7 +51,7 @@
 
     <!-- Right Section w/ Img -->
     <div class="right-section">
-        <img src="/assets/img/dogs (side)/mitchell-orr-PUY5xUszd3Y-unsplash.jpg" alt="">
+        <img src="assets/img/dogs (side)/mitchell-orr-PUY5xUszd3Y-unsplash.jpg" alt="">
     </div>
 
 </body>
