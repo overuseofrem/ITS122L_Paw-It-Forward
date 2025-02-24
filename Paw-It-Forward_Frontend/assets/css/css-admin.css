@@ -386,7 +386,7 @@ header {
     border-radius: 10px;
     width: 400px;
     text-align: center;
-    margin: auto; /* Centers horizontally */
+    margin: auto; 
     position: absolute;
     top: 50%;
     left: 50%;
@@ -453,3 +453,80 @@ textarea::placeholder {
     padding: 10px;
 }
 
+/* Donation List Container */
+.donation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Donation Item */
+.donation-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 80%;
+}
+
+/* Proof Image Container */
+.proof-img {
+    width: 250px;
+    height: 250px;
+    border: 2px solid white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.proof-img img {
+    width: 100%;
+    height: auto;
+}
+
+/* Donation Info */
+.donation-info {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.donation-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Action Icons - Stack Buttons Vertically */
+.action-icons {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;     
+    gap: 10px;               
+}
+
+
+.action-icons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.action-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Hover Effects */
+.approve-btn:hover {
+    opacity: 0.7;
+}
+
+.reject-btn:hover {
+    opacity: 0.7;
+}

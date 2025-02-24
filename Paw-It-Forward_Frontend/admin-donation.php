@@ -42,14 +42,14 @@
             <?php for ($i = 0; $i < 3; $i++): ?>
             <div class="donation-item">
                 <div class="proof-img">
-                    proof img
+                    <img src="assets/img/proof-placeholder.png" alt="Proof Image">
                 </div>
                 <div class="donation-info">
-                    user donated proof
+                    <p class="donation-text">user donated proof</p>
                 </div>
                 <div class="action-icons">
-                    <button> <img src="/Paw-It-Forward_Frontend/assets/img/post-action-check.png"></button>   
-                    <button> <img src="assets/img/post-action-x.png"></button> 
+                    <button class="approve-btn"> <img src="assets/img/post-action-check.png"></button>   
+                    <button class="reject-btn"> <img src="assets/img/post-action-x.png"></button> 
                 </div>
             </div>
             <?php endfor; ?>
