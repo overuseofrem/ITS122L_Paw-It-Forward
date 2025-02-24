@@ -49,8 +49,7 @@
     <div class="right-section">
         <?php 
         $images = [
-            "marek-szturc-CM1oVEUzsNM-unsplash.jpg",
-            "undine-tackmann-8mxSINYFoSw-unsplash.jpg"
+            "marek-szturc-CM1oVEUzsNM-unsplash.jpg"
         ];
         foreach ($images as $image): ?>
             <img src="/assets/img/dogs (side)/<?php echo $image; ?>" alt="">

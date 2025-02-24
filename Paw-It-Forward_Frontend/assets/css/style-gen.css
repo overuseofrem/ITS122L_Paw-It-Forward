@@ -73,7 +73,10 @@ html {
    ========================================================================== */
 
 body {
-    display: flex;           /* For left/right section layout */
+    display: flex;
+    min-height: 100vh;
+    align-items: stretch; /* Sections should fill the height */
+    overflow-x: hidden;    /* Prevent horizontal scrollbar */
 }
 
 /* ==========================================================================
@@ -81,6 +84,7 @@ body {
    ========================================================================== */
 
 header {
+    z-index: 999;
     position: absolute;
     width: 100%;
     display: flex;
@@ -176,6 +180,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-y: auto;      /* Make left section scrollable */
 }
 
 .left-section #hero {
@@ -240,15 +245,19 @@ header {
    ========================================================================== */
 
 .right-section {
-    display: flex;
-    flex-direction: column;
+    width: 60%;           /* Adjust as needed */
+    min-height: 100vh;
+    position: fixed;       /* Fix the right section in place */
+    top: 0;
+    right: 0;
 }
 
-img {
-    height: 100vh;
-    width: 52vw;
-    right: 0;
-    object-fit: cover;
+.right-section img {
+    width: 100%;           /* Fill the width of the right section */
+    height: 100vh;          /* Important: Fill the viewport height */
+    object-fit: cover;      /* Crop the image to cover, preserving aspect ratio */
+    object-position: center; /* Center the cropped area */
+    display: block;        /* Remove potential inline spacing */
 }
 
 /* ==========================================================================

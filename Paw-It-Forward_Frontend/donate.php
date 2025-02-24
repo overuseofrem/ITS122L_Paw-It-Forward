@@ -67,11 +67,7 @@
     <div class="right-section">
         <?php 
         $images = [
-            "erda-estremera-JBrbzg5N7Go-unsplash.jpg",
-            "tadeusz-lakota-OFPpEg7fm-I-unsplash.jpg",
-            "lucrezia-carnelos-8dZRksE0lEg-unsplash.jpg",
-            "flouffy--dMO9Dm-gkU-unsplash.jpg",
-            "karsten-winegeart-Z-rSM6yKgxo-unsplash.jpg"
+            "erda-estremera-JBrbzg5N7Go-unsplash.jpg"
         ];
         foreach ($images as $image): ?>
             <img src="/Paw-It-Foward_Frontend/assets/img/dogs (side)/<?php echo $image; ?>" alt="">

@@ -47,7 +47,6 @@
     <!-- Right Section w/ Img -->
     <div class="right-section">
         <img src="assets/img/dogs (side)/jay-wennington-CdK2eYhWfQ0-unsplash.jpg" alt="">
-        <img src="assets/img/dogs (side)/ja-san-miguel-_-QQuvAwQ-0-unsplash.jpg" alt="">
     </div>
 
 </body>

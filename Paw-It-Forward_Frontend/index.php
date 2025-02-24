@@ -51,7 +51,6 @@
     <!-- Right Section w/ Img -->
     <div class="right-section">
         <img src="assets/img/dogs (side)/ryan-walton-AbNO2iejoXA-unsplash.jpg" alt="">
-        <img src="assets/img/dogs (side)/cristofer-maximilian-3HjLaBmY2a4-unsplash.jpg" alt="">
     </div>
 
 </body>
