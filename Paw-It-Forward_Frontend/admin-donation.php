@@ -47,7 +47,7 @@
                 <div class="donation-info">
                     <p class="donation-text">user donated proof</p>
                 </div>
-                <div class="action-icons">
+                <div class="action-icons-donate">
                     <button class="approve-btn"> <img src="assets/img/post-action-check.png"></button>   
                     <button class="reject-btn"> <img src="assets/img/post-action-x.png"></button> 
                 </div>

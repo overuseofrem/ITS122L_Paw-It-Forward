@@ -37,9 +37,9 @@
             </div>
         </div>
 
-        <div class="form-container">
+        <div class="form-container-cert">
             <div class="file-input-container">
-                <label class="file-box">
+                <label class="file-box-cert">
                     certificate upload
                     <input type="file" accept="image/*,application/pdf" hidden>
                 </label>
