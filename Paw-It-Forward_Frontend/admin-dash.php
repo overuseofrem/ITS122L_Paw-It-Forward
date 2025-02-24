@@ -32,7 +32,7 @@
                 <div class="content-header">welcome, <br> admin</div>
                 <div class="btn-section-top">
                     <a href="#p" class="yellow-btn">projects</a>
-                    <a href="#" class="outline-btn">donations</a>
+                    <a href="admin-donation.php" class="outline-btn">donations</a>
                     <br><br><br>
                     <a href="admin-create.php" class="yellow-btn">new post</a>
                 </div>
