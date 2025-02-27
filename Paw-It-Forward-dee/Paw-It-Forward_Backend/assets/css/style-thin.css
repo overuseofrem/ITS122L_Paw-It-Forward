@@ -1,0 +1,369 @@
+/* ==========================================================================
+   Table of Contents:
+   --------------------------------------------------------------------------
+   1.  Global Styles & Resets
+   2.  Variables (Root)
+   3.  Typography
+   4.  Layout (Body, Sections)
+   5.  Header (Site Title, Navigation)
+   6.  Left Section (Content, Buttons, Address)
+   7.  Right Section (Images)
+   8.  Reusable Components (Buttons, Scroll Link)
+   ========================================================================== */
+
+/* ==========================================================================
+   1. Global Styles & Resets
+   ========================================================================== */
+
+/* IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--primary-color); /* Inherited from body, but good to have */
+    font-family: var(--font-family);
+    text-decoration: none;      /* Remove underlines from links */
+    font-size: var(--font-gen-size); /* General font size */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==========================================================================
+   2. Variables (Root)
+   ========================================================================== */
+
+:root {
+    --primary-color: white;
+    --secondary-color: #EBE597;
+    --background-fallback: #2A2C2B;
+    --font-family: 'Josefin Sans', sans-serif;
+    --font-gen-size: 20px;
+    --font-header-size: 60px;
+    --font-go-size: 50px;
+    --font-mini-size: 28px;
+    --bolded: 700;
+    --button-padding: 0.5rem 1.2rem;  /* Simplified: all sides defined */
+}
+
+/* ==========================================================================
+   3. Typography
+   ========================================================================== */
+
+.bolder-mini {
+    font-size: var(--font-mini-size);
+    font-weight: var(--bolded);
+}
+
+.bottom-up {
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 1rem;
+    margin-top: 30px;
+}
+
+/* ==========================================================================
+   4. Layout (Body, Sections)
+   ========================================================================== */
+
+body {
+    display: flex;
+    min-height: 100vh;
+    align-items: stretch; /* Sections should fill the height */
+    overflow-x: hidden;    /* Prevent horizontal scrollbar */
+}
+
+/* ==========================================================================
+   5. Header (Site Title, Navigation)
+   ========================================================================== */
+
+header {
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font-gen-size);
+    font-weight: var(--bolded);
+    padding: 5rem;
+}
+
+/* Site Title */
+.site-title {
+    color: var(--primary-color);
+}
+
+.site-title::before { /* yellow circle */
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 20px;
+}
+
+.nav a {
+    color: var(--background-fallback);
+}
+
+/* Donate Button */
+.nav-item-donate {
+    border: var(--background-fallback) solid 2px;
+    border-radius: 71px;
+    padding: var(--button-padding);
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+
+.nav-item-donate:hover {
+    background-color: var(--background-fallback);
+    color: var(--primary-color);
+}
+
+#donate-sign { /* Active Donate Button */
+    background-color: var(--background-fallback);
+    color: var(--primary-color);
+}
+
+/* Navigation Item (General) */
+.nav-item {
+    position: relative;
+}
+
+.nav-item::before { /* arrow for focus/hover */
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-image: url("/Paw-It-Forward_Frontend/assets/img/active-ind.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(-150%);
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.nav-item:hover::before,
+#active::before {
+    content: "";
+    opacity: 1;
+}
+
+/* ==========================================================================
+   6. Left Section (Content, Buttons, Certificate)
+   ========================================================================== */
+
+.left-section {
+    width: 80vw;
+    background-color: var(--background-fallback);
+    background-image: url("/Paw-It-Forward_Frontend/assets/img/background.png");
+    padding: 300px 80px 1rem 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;      /* Make left section scrollable */
+}
+
+.left-section #hero {
+    margin-bottom: 300px;
+}
+
+/* Content Section */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    align-items: flex-start; /* Prevent content from stretching */
+    margin-bottom: 3rem;
+}
+
+.content-header {
+    font-weight: var(--bolded);
+    font-size: var(--font-header-size);
+    width: 55%;
+}
+
+#sign-in .content-header { /* sign-in/Login header */
+    width: 70%;
+}
+
+.content p {
+    width: 55%;
+}
+
+#donation-info {
+    margin-bottom: 300px;
+}
+
+.donation-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-start; /* Prevent content from stretching */
+    margin-bottom: 5rem;
+}
+
+.donation-head {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.donation-title {
+    font-size: var(--font-header-size);
+    font-weight: var(--bolded);
+}
+
+.donation-raised {
+    font-size: 32px;
+    font-style: italic;
+    margin-top: 14px;
+}
+
+.donation-content p {
+    width: 65%;
+    margin-bottom: 1rem;
+}
+
+.qr-code, .dog-img {
+    border-radius: 20px;
+    margin-right: 2rem;
+    width: 15rem;
+    height: 15rem;
+}
+
+#cert-submission {
+    margin-top: 300px;
+}
+
+/* Button Section */
+.btn-section-side {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-section-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+/* Certificate Section */
+.content-certs {
+    width: 80%;
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cert {
+    border-radius: 50px;
+    height: 20rem;
+    width: 25rem;
+    background-color: var(--secondary-color);
+}
+
+/* ==========================================================================
+   7. Right Section (Images)
+   ========================================================================== */
+
+.right-section {
+    width: 30%;           /* Adjust as needed */
+    min-height: 100vh;
+    position: fixed;       /* Fix the right section in place */
+    top: 0;
+    right: 0;
+}
+
+.right-section img {
+    width: 100%;           /* Fill the width of the right section */
+    height: 100vh;          /* Important: Fill the viewport height */
+    object-fit: cover;      /* Crop the image to cover, preserving aspect ratio */
+    object-position: center; /* Center the cropped area */
+    display: block;        /* Remove potential inline spacing */
+}
+
+/* ==========================================================================
+   8. Reusable Components (Buttons, Scroll Link)
+   ========================================================================== */
+
+/* Yellow Button */
+.yellow-btn {
+    font-weight: var(--bolded);
+    font-size: var(--font-gen-size);
+    color: var(--background-fallback);
+    border: var(--secondary-color) solid 2px;
+    background-color: var(--secondary-color);
+    border-radius: 71px;
+    padding: var(--button-padding);
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.yellow-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--background-fallback);
+    border: var(--primary-color) solid 2px;
+}
+
+/* Outline Button */
+.outline-btn {
+    font-weight: var(--bolded);
+    border: var(--primary-color) solid 2px;
+    border-radius: 71px;
+    padding: var(--button-padding);
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.outline-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--background-fallback);
+}
+
+/* Scroll Link */
+.scroll-link {
+    text-decoration: underline;
+    font-size: var(--font-go-size);
+    font-weight: var(--bolded);
+    position: relative;
+    padding-right: 20px;
+}
+
+.scroll-link::after {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url("/Paw-It-Forward_Frontend/assets/img/go-arrow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(80%);
+}
+
+#fileInput {
+    display: none;
+}
