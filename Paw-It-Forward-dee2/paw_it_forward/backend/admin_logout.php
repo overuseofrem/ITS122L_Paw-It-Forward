@@ -1,0 +1,8 @@
+<?php
+    session_start();
+    session_unset(); // ✅ Clear all session variables
+    session_destroy(); // ✅ Destroy session
+
+    header("Location: ../admin-login.php?success=Logged out successfully.");
+    exit();
+?>
