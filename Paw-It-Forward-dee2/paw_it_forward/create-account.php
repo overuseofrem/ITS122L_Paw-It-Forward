@@ -23,11 +23,11 @@
             <a href="contact.php" class="nav-item">contact</a>
 
             <?php if (isset($_SESSION['AdminID'])): ?>
-                <a href="admin-dash.php" class="nav-item">dashboard</a>
+                <a href="admin-dash.php" class="nav-item">account</a>
                 <a href="backend/admin_logout.php" class="nav-item">log out</a>
 
             <?php elseif (isset($_SESSION['UserID'])): ?>
-                <a href="user-dash.php" class="nav-item">dashboard</a>
+                <a href="user-dash.php" class="nav-item">account</a>
                 <a href="backend/user_logout.php" class="nav-item">log out</a>
 
             <?php else: ?>
