@@ -1,0 +1,32 @@
+// NOTE: My notes for database codes (may change if I decide to tweak something) -- dee
+
+Initial Users:
+Name: Alyanna Taw, Email: alyanna@gmail.com, Password: alyanna101
+Name: Francine Taing, Email: francine@gmail.com, Password: francine102
+Name: Napoleon Jr. Andes, Email: napoleon@gmail.com, Password: napoleon103
+Name: Nicole Intal, Email: nicole@gmail.com, Password: nicole104
+Name: Rowencell Penaflor, Email: rowencell@gmail.com, Password: rowencell105
+
+Admin Details:
+Name: Darrel Fontillas, Email: darrelf07@gmail.com, Password: adminpass07
+
+
+---------------------------------------------------------------------------------------------
+
+// Dee's progress list:
+
+DONE WORKING ON:
+
+Hello poo. Updates so far. I'm currently done with:
+
+1. create-account.php (frontend)
+2. user_register.php (backend)
+3. login.php (frontend)
+4. user_login.php (backend)
+5. admin_login.php (backend)
+6. admin-dash.php (frontend)
+7. admin_dash.php (backend)
+8. admin-edit.php (frontend -- added webpage)
+9. admin_edit.php (backend)
+
+
