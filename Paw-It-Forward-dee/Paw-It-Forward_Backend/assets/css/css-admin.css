@@ -1,0 +1,584 @@
+/* ==========================================================================
+   Table of Contents:
+   --------------------------------------------------------------------------
+   1.  Global Styles & Resets
+   2.  Variables (Root)
+   3.  Typography
+   4.  Layout (Body, Sections)
+   5.  Header (Site Title, Navigation)
+   6.  Left Section (Content, Buttons, Address)
+   7.  Reusable Components (Buttons, Scroll Link)
+   ========================================================================== */
+
+/* ==========================================================================
+   1. Global Styles & Resets
+   ========================================================================== */
+
+/* IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--primary-color); /* Inherited from body, but good to have */
+    font-family: var(--font-family);
+    text-decoration: none;      /* Remove underlines from links */
+    font-size: var(--font-gen-size); /* General font size */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==========================================================================
+   2. Variables (Root)
+   ========================================================================== */
+
+:root {
+    --primary-color: white;
+    --secondary-color: #EBE597;
+    --background-fallback: #2A2C2B;
+    --font-family: 'Josefin Sans', sans-serif;
+    --font-gen-size: 20px;
+    --font-header-size: 60px;
+    --font-go-size: 50px;
+    --font-mini-size: 28px;
+    --bolded: 700;
+    --button-padding: 0.5rem 1.2rem;  /* Simplified: all sides defined */
+}
+
+/* ==========================================================================
+   3. Typography
+   ========================================================================== */
+
+.bolder-mini {
+    font-size: var(--font-mini-size);
+    font-weight: var(--bolded);
+}
+
+.bottom-up {
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   4. Layout (Body, Sections)
+   ========================================================================== */
+
+body {
+    display: flex;           /* For left/right section layout */
+}
+
+/* ==========================================================================
+   5. Header (Site Title, Navigation)
+   ========================================================================== */
+
+header {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font-gen-size);
+    font-weight: var(--bolded);
+    padding: 5rem;
+}
+
+/* Site Title */
+.site-title {
+    color: var(--primary-color);
+}
+
+.site-title::before { /* yellow circle */
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 20px;
+}
+
+.nav a {
+    color: var(--primary-color);
+}
+
+/* Donate Button */
+.nav-item-donate {
+    border: var(--primary-color) solid 2px;
+    border-radius: 71px;
+    padding: var(--button-padding);
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+
+.nav-item-donate:hover {
+    background-color: var(--primary-color);
+    color: var(--background-fallback);
+}
+
+/* Navigation Item (General) */
+.nav-item {
+    position: relative;
+}
+
+.nav-item::before { /* arrow for focus/hover */
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-image: url("/Paw-It-Forward_Frontend/assets/img/social-arrow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(-150%);
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.nav-item:hover::before,
+#active::before {
+    content: "";
+    opacity: 1;
+}
+
+
+/* ==========================================================================
+   6. Left Section (Content, Buttons, Certificate)
+   ========================================================================== */
+
+.left-section {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: var(--background-fallback);
+    background-image: url("/Paw-It-Forward_Frontend/assets/img/background.png");
+    padding: 300px 80px 1rem 80px;
+    display: flex;
+    gap: 10rem;
+}
+
+.left-section #hero {
+    margin-bottom: 300px;
+}
+
+/* Content Section */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    align-items: flex-start; 
+    margin-bottom: 3rem;
+}
+
+.content-header {
+    font-weight: var(--bolded);
+    font-size: var(--font-header-size);
+    width: 55%;
+}
+
+#sign-in .content-header { /* sign-in/Login header */
+    width: 70%;
+}
+
+.content p {
+    width: 55%;
+}
+
+#donation-info {
+    margin-bottom: 300px;
+}
+
+.donation-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-start;
+    margin-bottom: 5rem;
+}
+
+.donation-head {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.donation-title {
+    font-size: var(--font-header-size);
+    font-weight: var(--bolded);
+}
+
+.donation-raised {
+    font-size: 32px;
+    font-style: italic;
+    margin-top: 14px;
+}
+
+.donation-content p {
+    width: 65%;
+    margin-bottom: 1rem;
+}
+
+.qr-code, .dog-img {
+    border-radius: 20px;
+    margin-right: 2rem;
+    width: 15rem;
+    height: 15rem;
+}
+
+/* Button Section */
+.btn-section-side {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-section-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+/* Certificate Section */
+.content-certs {
+    width: 80%;
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cert {
+    border-radius: 50px;
+    height: 20rem;
+    width: 25rem;
+    background-color: var(--secondary-color);
+}
+
+/* ==========================================================================
+   7. Reusable Components (Buttons, Scroll Link)
+   ========================================================================== */
+
+/* Yellow Button */
+.yellow-btn {
+    font-weight: var(--bolded);
+    font-size: var(--font-gen-size);
+    color: var(--background-fallback);
+    border: var(--secondary-color) solid 2px;
+    background-color: var(--secondary-color);
+    border-radius: 71px;
+    padding: var(--button-padding);
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.yellow-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--background-fallback);
+    border: var(--primary-color) solid 2px;
+}
+
+/* Outline Button */
+.outline-btn {
+    font-weight: var(--bolded);
+    border: var(--primary-color) solid 2px;
+    border-radius: 71px;
+    padding: var(--button-padding);
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.outline-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--background-fallback);
+}
+
+/* Scroll Link */
+.scroll-link {
+    text-decoration: underline;
+    font-size: var(--font-go-size);
+    font-weight: var(--bolded);
+    position: relative;
+    padding-right: 20px;
+}
+
+.scroll-link::after {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url("/Paw-It-Forward_Frontend/assets/img/go-arrow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(80%);
+}
+
+.proj-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    overflow-x: auto; 
+    overflow-y: visible;
+    margin-bottom: 5rem;
+}
+
+.proj-item {
+    width: 15rem;
+    border: white 2px solid;
+    border-radius: 40px;
+    padding: 1rem 2rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.proj-title,
+.proj-funds {
+    font-weight: var(--bolded);
+    font-size: var(--font-mini-size);
+}
+
+.proj-img {
+    height: 10rem;
+    width: 10rem;
+    border: white 2px solid;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+
+/* Action Icons for Projects - Stack Buttons horizontally */
+.action-icons {
+    display: flex; /* Use flexbox for horizontal layout */
+    gap: 10px; /* Adds spacing between buttons */
+    align-items: center; /* Aligns items in the same row */
+    justify-content: center; /* Centers the buttons */
+}
+
+.action-icons form,
+.action-icons a {
+    display: inline-block; /* Ensures forms & links behave like inline elements */
+    margin: 0; /* Prevents unwanted margin spacing */
+}
+
+.action-icons button {
+    display: flex; /* Ensures the button content aligns properly */
+    align-items: center;
+    justify-content: center;
+    padding: 5px; /* Adjust padding as needed */
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.action-icons button img {
+    width: 46px;
+    height: 46px;
+    background: none;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-fallback);
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    margin: auto; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.file-box-cert {
+    width: 150%;
+    height: 300px;
+    background: #3c3c3c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Container holding the file upload boxes */
+.file-input-container {
+    display: flex;
+    justify-content: space-between;
+    width: 150%; /* Adjust to 100% of the container or parent */
+    margin-bottom: 15px;
+    padding: 0; /* Avoid any unwanted spacing around the container */
+}
+
+.file-box {
+    width: 45%;
+    height: 200px;
+    background: #3c3c3c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    cursor: pointer;
+    font-size: 14px;
+    overflow: hidden; /* Prevents overflow */
+    position: relative; /* Ensure layering */
+}
+
+/* Ensure the image is positioned correctly */
+.file-box img {
+    max-width: 118%; /* Fit within the box */
+    max-height: 118%; /* Keep image inside */
+    object-fit: contain; /* Prevent stretching */
+    position: absolute; /* Make it fill the box */
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 150%;
+    padding: 5px;
+    margin-top: 10px;
+    border: 2px solid;
+    border-radius: 15px;
+    background: none;
+    color: white;
+}
+
+.amount-container {
+    display: flex;
+    justify-content: space-between;
+    width: 150%;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.amount-container input {
+    width: 48%;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+    margin-top: 10px;
+}
+
+
+input::placeholder,
+textarea::placeholder {
+    font-size: 14px; 
+    color: white;
+    padding: 10px;
+}
+
+/* Donation List Container */
+.donation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Donation Item */
+.donation-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 80%;
+}
+
+/* Proof Image Container */
+.proof-img {
+    width: 250px;
+    height: 250px;
+    border: 2px solid white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.proof-img img {
+    width: 100%;
+    height: auto;
+}
+
+/* Donation Info */
+.donation-info {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.donation-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Action Icons - Stack Buttons Vertically */
+.action-icons-donate{
+    display: flex;
+    flex-direction: column;  
+    align-items: center;     
+    gap: 10px;               
+}
+
+
+.action-icons-donate button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.action-icons-donate img {
+    width: 46px;
+    height: 46px;
+}
+
+.approve-btn:hover {
+    opacity: 0.7;
+}
+
+.reject-btn:hover {
+    opacity: 0.7;
+}
+
+.edit-btn:hover {
+    opacity: 0.7;
+}
+
+
+
+
+
