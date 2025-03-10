@@ -152,7 +152,7 @@ header {
     position: absolute;
     width: 25px;
     height: 25px;
-    background-image: url("/Paw-It-Forward_Frontend/assets/img/active-ind.svg");
+    background-image: url("/paw_it_forward/assets/img/active-ind.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -176,7 +176,7 @@ header {
 .left-section {
     width: 48vw;
     background-color: var(--background-fallback);
-    background-image: url("/Paw-It-Forward_Frontend/assets/img/background.png");
+    background-image: url("/paw_it_forward/assets/img/background.png");
     padding: 300px 80px 1rem 80px;
     display: flex;
     flex-direction: column;
@@ -312,7 +312,7 @@ header {
     display: inline-block;
     width: 40px;
     height: 40px;
-    background-image: url("/Paw-It-Forward_Frontend/assets/img/go-arrow.svg");
+    background-image: url("/paw_it_forward/assets/img/go-arrow.svg");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -333,7 +333,7 @@ header {
     display: inline-block;
     width: 30px;
     height: 30px;
-    background-image: url("/Paw-It-Forward_Frontend/assets/img/social-arrow.svg");
+    background-image: url("/paw_it_forward/assets/img/social-arrow.svg");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
