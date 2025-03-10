@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         mkdir($uploadDir, 0777, true);
     }
 
-    // The directory must be writable by the server -- this is important for unwritable directories
+    // Ensure the directory is writable by the server
     if (!is_writable($uploadDir)) {
         // Set the folder permissions to 777 (writable by everyone) or adjust as needed
         chmod($uploadDir, 0777); 
