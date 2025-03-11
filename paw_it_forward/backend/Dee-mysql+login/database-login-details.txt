@@ -1,0 +1,50 @@
+// NOTE: My notes for database codes (may change if I decide to tweak something) -- dee
+
+Initial Users:
+Name: Alyanna Taw, Email: alyanna@gmail.com, Password: alyanna101
+Name: Francine Taing, Email: francine@gmail.com, Password: francine102
+Name: Napoleon Jr. Andes, Email: napoleon@gmail.com, Password: napoleon103
+Name: Nicole Intal, Email: nicole@gmail.com, Password: nicole104
+Name: Rowencell Penaflor, Email: rowencell@gmail.com, Password: rowencell105
+Name: Daniella Nilo, Email: daniella@gmail.com, Password: daniella106
+
+Admin Details:
+Name: Darrel Fontillas, Email: darrelf07@gmail.com, Password: adminpass07
+
+
+---------------------------------------------------------------------------------------------
+
+// Dee's progress list:
+
+DONE WORKING ON:
+
+i. user/admin start and exit sessions
+ii. user/admin login verifications
+iii. user/admin logout verifications
+iv. guest restriction configurations (<header> frontend edit)
+v. make static buttons/containers into forms to track of changes (<body> frontend edit)
+
+1. create-account.php (frontend)
+2. user_register.php (backend)
+3. login.php (frontend)
+4. user_logout.php (backend -- added functionality)
+5. admin_logout.php (backend -- added functionality)
+6. user_login.php (backend)
+7. admin_login.php (backend)
+8. admin-dash.php (frontend)
+9. admin_dash.php (backend)
+10. admin-edit.php (frontend -- added webpage)
+11. admin_edit.php (backend -- added functionality)
+12. donate.php (frontend)
+13. donate_proof.php (backend)
+14. upload.php (backend -- handles donation uploads)
+14. admin-donation.php (frontend)
+15. admin_donation.php (backend)
+
+*** Current updates on existing codes
+16. admin-certificate.php (frontend)
+17. admin_certificate.php (backend)
+18. user-dash.php (frontend)
+
+*** New php file
+19. user_dash.php (backend)
