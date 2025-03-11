@@ -31,7 +31,7 @@
                 <a href="backend/user_logout.php" class="nav-item">log out</a>
 
             <?php else: ?>
-                <a href="login.php" class="nav-item" id="active">account</a>
+                <a href="login.php" class="nav-item">account</a>
             <?php endif; ?>
         </div>
     </header>
