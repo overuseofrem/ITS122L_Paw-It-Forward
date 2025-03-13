@@ -50,7 +50,7 @@
             <!-- Expanded Content Section Below -->
             <div class="content" id="what-we-have-done">
                 <div class="content-header">your donations create real impact</div>
-                <p>Thousands of dogs face hardship every day due to abandonment, neglect, and lack of resources. Paw It Forward is not a shelter, but a platform that connects generous donors with trusted organizations and individuals working to improve the lives of these animals. Your support helps provide food, medical treatment, and essential supplies to those in need.</p>
+                <p>Thousands of animals face hardship every day due to abandonment, neglect, and lack of resources. Paw It Forward is not a shelter, but a platform that connects generous donors with trusted organizations and individuals working to improve the lives of these animals. Your support helps provide food, medical treatment, and essential supplies to those in need.</p>
             </div>
             <div class="content">
                 <div class="content-header">how your contribution makes a difference</div>

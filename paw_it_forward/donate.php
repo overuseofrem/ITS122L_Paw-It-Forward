@@ -65,14 +65,16 @@
             <!-- Welcome Message -->
             <div class="content" id="hero">
                 <div class="content-header">Thank you so much for choosing to support Paw It Forward!</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                <p>We greatly appreciate your donation. Rest assured it will be given to animals in need.</p>
                 <a href="#donation-info" class="scroll-link">impact of your support</a>
             </div>
 
             <!-- How Donations Help -->
             <div class="content" id="donation-info">
                 <div class="content-header">How your contribution makes a difference</div>
-                <p>Every donation goes directly to funding critical care...</p>
+                <p>When you support Paw it Forward, you become a lifeline for stray and abandoned animals in need. Your contribution helps provide essential medical care, life-saving treatments, and rehabilitation for animals. </p>
+
+                <p> Every donation brings hope, healing, and a brighter future for countless animals in need. Together, we can make a lasting impact. </p>
                 <a href="#projects" class="scroll-link">dogs in need</a>
             </div>
 
