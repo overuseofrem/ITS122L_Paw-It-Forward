@@ -41,13 +41,31 @@
         <div class="content-wrapper">
             <!-- Expanded Content Section Below -->
             <div class="content" id="what-we-have-done">
-                <div class="content-header">every dog deserves a chance to have a better life</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam enim varius, gravida ante commodo, blandit ex. Duis at magna pulvinar, imperdiet sapien vitae, feugiat lectus. Nullam tempor blandit efficitur. Nam quis odio nec sapien hendrerit imperdiet.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam enim varius, gravida ante commodo, blandit ex. Duis at magna pulvinar, imperdiet sapien vitae, feugiat lectus. Nullam tempor blandit efficitur. Nam quis odio nec sapien hendrerit imperdiet.</p>
+                <div class="content-header">Vision</div>
+                <p>A compassionate and sustainable community where every stray dog and cat finds a loving home and the care they deserve.</p>
+
+                <p>Rescue & Rehabilitation – Provide aid and resources to shelters for the rescue, medical care, and rehabilitation of stray animals.</p>
+
+                <p>Adoption & Foster Support – Promote responsible pet adoption and foster programs to give strays a second chance at a loving home.</p>
+
+                <p>Welfare & Advocacy – Raise awareness about responsible pet ownership, animal rights, and humane treatment of stray animals.</p>
+
+                <p>Sustainable Shelter Support – Partner with shelters to provide funding, food, and medical supplies to improve shelter conditions.</p>
+
+                <p>Community Engagement – Educate and involve the public through outreach programs, volunteer opportunities, and fundraising initiatives.</p>
             </div>
             <div class="content">
-                <div class="content-header">we envisage a world where all animals are treated with respect</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam enim varius, gravida ante commodo, blandit ex. Duis at magna pulvinar, imperdiet sapien vitae, feugiat lectus. Nullam tempor blandit efficitur. Nam quis odio nec sapien hendrerit imperdiet.</p>
+                <div class="content-header">Goal</div>
+                <p>Increase the number of rescued strays that receive proper medical care and rehabilitation.</p>
+
+                <p>Promote and facilitate successful adoptions through community-driven efforts.</p>
+
+                <p>Strengthen partnerships with shelters, veterinarians, and advocacy groups to expand resources.</p>
+
+                <p>Implement educational campaigns to reduce stray populations through responsible pet ownership and spay/neuter programs.</p>
+
+                <p>Foster a culture of compassion where individuals and businesses actively support animal welfare initiatives.</p>
+
             </div>
             <!-- New Button Section Below Content -->
             <div class="btn-section-side">
